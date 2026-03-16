@@ -1,6 +1,7 @@
 package com.example.main.B2_Hibernate_1Bang.util;
 
 import com.example.main.B2_Hibernate_1Bang.entity.Category1;
+import com.example.main.B2_Hibernate_1Bang.entity.Product;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -26,6 +27,7 @@ public class HibernateUtil {
         conf.setProperties(properties);
         // dang ky
         conf.addAnnotatedClass(Category1.class);
+        conf.addAnnotatedClass(Product.class);
         ServiceRegistry registry = new StandardServiceRegistryBuilder()
                 .applySettings(conf.getProperties()).build();
         FACTORY = conf.buildSessionFactory(registry);

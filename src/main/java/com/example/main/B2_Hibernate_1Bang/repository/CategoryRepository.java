@@ -68,12 +68,13 @@ public class CategoryRepository {
             // B3: commit day du lieu
             s.getTransaction().commit();
         } catch (Exception e) {
-            // hien thi øloi
+            // hien thi loi
             s.getTransaction().rollback();
             e.printStackTrace();
         }
     }
 
+    // invalid colum => ten cot/bang
     // Category1 is not mapped
     // TH1: entity thieu @Entity
     // Th2: chua dang ky entity vs Hibernate
