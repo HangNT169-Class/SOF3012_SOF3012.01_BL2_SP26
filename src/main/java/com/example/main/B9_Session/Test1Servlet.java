@@ -16,7 +16,13 @@ public class Test1Servlet extends HttpServlet {
         request.setAttribute("name2",name);
         request.getRequestDispatcher("/buoi9/test3.jsp").forward(request,response);
     }
-
+//[
+//    {
+//
+//    }]
+//    {
+//
+//    }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
